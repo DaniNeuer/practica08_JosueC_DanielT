@@ -59,7 +59,9 @@ namespace practica08_JosueC_DanielT
 
         protected void lnkCheckout_Click(object sender, EventArgs e)
         {
-
+            Session["seleccion"] = literalSeleccionActual.Text;
+            Session["costo"] = txtTotal.Text;
+            Response.Redirect("CheckOut.aspx");
         }
     }
 }
