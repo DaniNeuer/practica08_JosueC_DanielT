@@ -60,15 +60,6 @@ namespace practica08_JosueC_DanielT
         protected global::System.Web.UI.WebControls.RadioButton rbtGruesa;
 
         /// <summary>
-        /// Control panelIngredientes.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelIngredientes;
-
-        /// <summary>
         /// Control panelIngredientess.
         /// </summary>
         /// <remarks>
@@ -114,6 +105,33 @@ namespace practica08_JosueC_DanielT
         protected global::System.Web.UI.WebControls.CheckBox chkSalchicha;
 
         /// <summary>
+        /// Control rblTamano.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblTamano;
+
+        /// <summary>
+        /// Control cblExtras.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList cblExtras;
+
+        /// <summary>
+        /// Control cblBebidas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList cblBebidas;
+
+        /// <summary>
         /// Control literalSeleccionActual.
         /// </summary>
         /// <remarks>
@@ -139,5 +157,14 @@ namespace practica08_JosueC_DanielT
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnkCheckout;
+
+        /// <summary>
+        /// Control hlContactos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlContactos;
     }
 }

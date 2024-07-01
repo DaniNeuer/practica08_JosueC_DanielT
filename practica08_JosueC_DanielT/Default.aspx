@@ -21,8 +21,6 @@ ContentPlaceHolderID="ContenedorPrincipal" runat="server">
                     <asp:TableCell runat="server" Text="$10">  </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
-            <asp:Panel ID="panelIngredientes" runat="server">
-            </asp:Panel>
         </asp:Panel>
         <asp:Panel ID="panelIngredientess" runat="server" GroupingText="Escoge los ingredientes:">
             
@@ -41,11 +39,46 @@ ContentPlaceHolderID="ContenedorPrincipal" runat="server">
                 </asp:TableRow>
             </asp:Table>
         </asp:Panel>
+        <!-- Panel para seleccionar el tamaño de la pizza -->
+         <b>Escoge el tamaño de la pizza:</b>
+            <asp:RadioButtonList ID="rblTamano" runat="server" AutoPostBack="True" onSelectedIndexChanged="Opciones_CheckedChanged">
+                <asp:ListItem Text="Personal => $5" Value="5"></asp:ListItem>
+                <asp:ListItem Text="Mediana => $10" Value="10"></asp:ListItem>
+                <asp:ListItem Text="Familiar => $15" Value="15"></asp:ListItem>
+                <asp:ListItem Text="Gigante => $20" Value="20"></asp:ListItem>
+            </asp:RadioButtonList>
+        
+
+         <!-- Panel para seleccionar los extras -->
+        <b>Escoge algun extra:</b>
+            <asp:CheckBoxList ID="cblExtras" runat="server" AutoPostBack="True" onSelectedIndexChanged="Opciones_CheckedChanged">
+                <asp:ListItem Text="Papas fritas => $3" Value="3"></asp:ListItem>
+                <asp:ListItem Text="Dedos de queso => $4" Value="4"></asp:ListItem>
+                <asp:ListItem Text="Brownie => $2" Value="2"></asp:ListItem>
+                <asp:ListItem Text="Bordes de queso => $5" Value="5"></asp:ListItem>
+                <asp:ListItem Text="Bordes de salchicha con queso => $6" Value="6"></asp:ListItem>
+            </asp:CheckBoxList>
+        
+
+        <!-- Panel para seleccionar las bebidas -->
+        <b>Escoge alguna bebida:</b>
+            <asp:CheckBoxList ID="cblBebidas" runat="server" AutoPostBack="True" onSelectedIndexChanged="Opciones_CheckedChanged">
+                <asp:ListItem Text="Pepsi => $1" Value="1"></asp:ListItem>
+                <asp:ListItem Text="Sprite => $1" Value="1"></asp:ListItem>
+                <asp:ListItem Text="Fiora => $1" Value="1"></asp:ListItem>
+                <asp:ListItem Text="Coca Cola => $1" Value="1"></asp:ListItem>
+            </asp:CheckBoxList>
+        
+        
         <asp:Literal ID="literalSeleccionActual" runat="server" Text="&quot;&quot;"></asp:Literal>
         <p>
             Valor a pagar:</p>
         <asp:TextBox ID="txtTotal" runat="server" ReadOnly="True" ></asp:TextBox>
         <p>
             <asp:LinkButton ID="lnkCheckout" runat="server" OnClick="lnkCheckout_Click">Ir a pago...</asp:LinkButton>
+        </p>
+    <!-- Enlace a la página de contactos -->
+        <p>
+            <asp:HyperLink ID="hlContactos" runat="server" NavigateUrl="~/Contactos.aspx">Contactos</asp:HyperLink>
         </p>
 </asp:Content>

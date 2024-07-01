@@ -51,6 +51,16 @@ namespace practica08_JosueC_DanielT
                     costoTotal += float.Parse(precioMasa);
                 }
             }
+            // Se agrega un nuevo cambio en el literal, que sera el tamaño
+            seleccion.Append("; Tamaño: ");
+            //verificamos que no sea null la seleccion del radio button
+            if (rblTamano.SelectedItem != null)
+            {
+                //Agregamos a la seleccion que se agregara en el literal seguido con un espacio
+                seleccion.Append(rblTamano.SelectedItem.Text + " ");
+                //se agrega el costo final con el valor del value que se asigna al radiobutton que se seleccione
+                costoTotal += float.Parse(rblTamano.SelectedItem.Value);
+            }
 
             seleccion.Append("; Ingredientes: ");
 
@@ -80,6 +90,30 @@ namespace practica08_JosueC_DanielT
                 if (!string.IsNullOrEmpty(precioIngrediente))
                 {
                     costoTotal += float.Parse(precioIngrediente);
+                }
+            }
+            // agregamos los extras a la seleccion
+            seleccion.Append("; Extras: ");
+            // recorregmos los items de la lista de check
+            foreach (ListItem item in cblExtras.Items)
+            {
+                //verificamos si algun item ha sido chekeado
+                if (item.Selected)
+                {
+                    // si el check es verdadero si agrega a la seleccion
+                    seleccion.Append(item.Text + " ");
+                    // se suma al costo final el valor de value del check
+                    costoTotal += float.Parse(item.Value);
+                }
+            }
+            // realizmoa la misma logica que en bibidas
+            seleccion.Append("; Bebidas: ");
+            foreach (ListItem item in cblBebidas.Items)
+            {
+                if (item.Selected)
+                {
+                    seleccion.Append(item.Text + " ");
+                    costoTotal += float.Parse(item.Value);
                 }
             }
 
