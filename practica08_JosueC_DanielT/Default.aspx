@@ -32,7 +32,7 @@ ContentPlaceHolderID="ContenedorPrincipal" runat="server">
                     <asp:TableCell runat="server" Text="$8">  </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow runat="server">
-                    <asp:TableCell runat="server"><asp:CheckBox ID="chkPeperoni" runat="server" Text="Peperoni " AutoPostBack="True" onCheckedChanged ="Opciones_CheckedChanged" />  </asp:TableCell>
+                    <asp:TableCell runat="server"><asp:CheckBox ID="chkPeperoni" runat="server" Text="Peperoni" AutoPostBack="True" onCheckedChanged ="Opciones_CheckedChanged" />  </asp:TableCell>
                     <asp:TableCell runat="server" Text="$10">  </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow runat="server">

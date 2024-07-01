@@ -22,37 +22,68 @@ namespace practica08_JosueC_DanielT
         {
             StringBuilder seleccion = new StringBuilder("Tipo de masa: ");
             float costoTotal = 0;
+
+            // Verificar y agregar el costo de la masa
             if (rbtDelgada.Checked)
             {
                 seleccion.Append(rbtDelgada.Text + " ");
-                costoTotal += float.Parse((String)Application[rbtDelgada.Text]);
+                string precioMasa = Application[rbtDelgada.Text] as string;
+                if (!string.IsNullOrEmpty(precioMasa))
+                {
+                    costoTotal += float.Parse(precioMasa);
+                }
             }
             else if (rbtPanPizza.Checked)
             {
                 seleccion.Append(rbtPanPizza.Text + " ");
-                costoTotal += float.Parse((String)Application[rbtPanPizza.Text]);
+                string precioMasa = Application[rbtPanPizza.Text] as string;
+                if (!string.IsNullOrEmpty(precioMasa))
+                {
+                    costoTotal += float.Parse(precioMasa);
+                }
             }
             else if (rbtGruesa.Checked)
             {
                 seleccion.Append(rbtGruesa.Text + " ");
-                costoTotal += float.Parse((String)Application[rbtGruesa.Text]);
+                string precioMasa = Application[rbtGruesa.Text] as string;
+                if (!string.IsNullOrEmpty(precioMasa))
+                {
+                    costoTotal += float.Parse(precioMasa);
+                }
             }
+
             seleccion.Append("; Ingredientes: ");
+
+            // Verificar y agregar el costo de los ingredientes
             if (chkHongo.Checked)
             {
                 seleccion.Append(chkHongo.Text + " ");
-                costoTotal += float.Parse((String)Application[chkHongo.Text]);
+                string precioIngrediente = Application[chkHongo.Text] as string;
+                if (!string.IsNullOrEmpty(precioIngrediente))
+                {
+                    costoTotal += float.Parse(precioIngrediente);
+                }
             }
             if (chkPeperoni.Checked)
             {
                 seleccion.Append(chkPeperoni.Text + " ");
-                costoTotal += float.Parse((String)Application[chkPeperoni.Text]);
+                string precioIngrediente = Application[chkPeperoni.Text] as string;
+                if (!string.IsNullOrEmpty(precioIngrediente))
+                {
+                    costoTotal += float.Parse(precioIngrediente);
+                }
             }
             if (chkSalchicha.Checked)
             {
                 seleccion.Append(chkSalchicha.Text + " ");
-                costoTotal += float.Parse((String)Application[chkSalchicha.Text]);
+                string precioIngrediente = Application[chkSalchicha.Text] as string;
+                if (!string.IsNullOrEmpty(precioIngrediente))
+                {
+                    costoTotal += float.Parse(precioIngrediente);
+                }
             }
+
+            // Mostrar la selección y el costo total
             literalSeleccionActual.Text = seleccion.ToString();
             txtTotal.Text = costoTotal.ToString();
         }
