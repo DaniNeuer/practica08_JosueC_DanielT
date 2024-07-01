@@ -1,26 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="practica08_JosueC_DanielT.Default" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master"
+AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="practica08_JosueC_DanielT.Default" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <style type="text/css">
-        .nuevoEstilo1 {
-            font-size: large;
-        }
-        .nuevoEstilo2 {
-            font-family: "Arial Black";
-            font-size: x-large;
-            font-weight: 100;
-            text-decoration: underline;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1"
+ContentPlaceHolderID="ContenedorPrincipal" runat="server">
         <div class="nuevoEstilo2">
             Pizzeria de: Josue y Daniel</div>
         <asp:Panel ID="panelTipoMasa" runat="server" GroupingText="&quot;Escoge un tipo de masa:&quot;">
@@ -64,8 +46,6 @@
             Valor a pagar:</p>
         <asp:TextBox ID="txtTotal" runat="server" ReadOnly="True" ></asp:TextBox>
         <p>
-            <asp:LinkButton ID="lnkCheckout" runat="server">Ir a pago...</asp:LinkButton>
+            <asp:LinkButton ID="lnkCheckout" runat="server" OnClick="lnkCheckout_Click">Ir a pago...</asp:LinkButton>
         </p>
-    </form>
-</body>
-</html>
+</asp:Content>

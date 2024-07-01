@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="practica08_JosueC_DanielT.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Pizzería de: Josue y Daniel</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="frmMaster">
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                Pizzería de: Josue y Daniel
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:ContentPlaceHolder ID="ContenedorPrincipal" runat="server">
+        </asp:ContentPlaceHolder>
+        Encuentranos en Av Pedro Vicente Maldonado y Alonso de Angulo<br />
+        Contactos al 09857463258 - 09784557153</form>
+</body>
+</html>

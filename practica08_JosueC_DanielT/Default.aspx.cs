@@ -25,36 +25,41 @@ namespace practica08_JosueC_DanielT
             if (rbtDelgada.Checked)
             {
                 seleccion.Append(rbtDelgada.Text + " ");
-                costoTotal += 5;
+                costoTotal += float.Parse((String)Application[rbtDelgada.Text]);
             }
             else if (rbtPanPizza.Checked)
             {
                 seleccion.Append(rbtPanPizza.Text + " ");
-                costoTotal += 8;
+                costoTotal += float.Parse((String)Application[rbtPanPizza.Text]);
             }
             else if (rbtGruesa.Checked)
             {
                 seleccion.Append(rbtGruesa.Text + " ");
-                costoTotal += 10;
+                costoTotal += float.Parse((String)Application[rbtGruesa.Text]);
             }
             seleccion.Append("; Ingredientes: ");
             if (chkHongo.Checked)
             {
                 seleccion.Append(chkHongo.Text + " ");
-                costoTotal += 8;
+                costoTotal += float.Parse((String)Application[chkHongo.Text]);
             }
             if (chkPeperoni.Checked)
             {
                 seleccion.Append(chkPeperoni.Text + " ");
-                costoTotal += 10;
+                costoTotal += float.Parse((String)Application[chkPeperoni.Text]);
             }
             if (chkSalchicha.Checked)
             {
                 seleccion.Append(chkSalchicha.Text + " ");
-                costoTotal += 12;
+                costoTotal += float.Parse((String)Application[chkSalchicha.Text]);
             }
             literalSeleccionActual.Text = seleccion.ToString();
             txtTotal.Text = costoTotal.ToString();
+        }
+
+        protected void lnkCheckout_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
