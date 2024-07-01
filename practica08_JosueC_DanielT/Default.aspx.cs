@@ -1,4 +1,30 @@
-﻿using System;
+﻿// ************************************************************************
+// Practica 08
+// Josue Chicaiza - Daniel Tapia
+// Fecha de realización: 26/06/2024
+// Fecha de entrega: 03/07/2024
+// Resultados:
+// * La aplicación web implementada cumple con las funcionalidades básicas de
+// registrar y confirmar órdenes de pizza, incluyendo la selección de tipos de
+// masa e ingredientes, cálculo del costo total y redirección a una página de confirmación.
+// * La implementación de eventos CheckedChanged y Click permite una interacción dinámica y
+// en tiempo real, mejorando la experiencia del usuario al ver actualizaciones instantáneas
+// en su selección y el costo total.
+// Conclusiones:
+// * El uso de HttpSessionState y Application para gestionar el estado de la aplicación y los
+// datos del usuario ha demostrado ser una estrategia eficiente para mantener la coherencia de
+// los datos a lo largo de la navegación.
+// * La experiencia previa sobre el uso de controladores como los radioButtons y Checkebox 
+// ayudo con el desarrollo de esta practica en donde obtenemos el valor que tiene cada constrolador.
+// * Gracias al atributo de value que tienen los controladores radioButton y CheckBox nos permite
+// obtener el valor asignado si el uso del Global.asax.
+// Recomendaciones:
+// * Implementar validaciones adicionales tanto en el lado del cliente como en el servidor para asegurar
+// que los datos ingresados sean correctos y para mejorar la seguridad de la aplicación.
+// * 
+// ************************************************************************
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
